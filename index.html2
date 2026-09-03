@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mason Schubert | Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    /* ---------- Global Styles ---------- */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at top, #dbe7ff, #f5f5f5);
+      color: #1a1a1a;
+    }
+
+    /* ---------- Navigation ---------- */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #1b4b8a;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: #333;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #1b4b8a;
+      text-shadow: 0 0 8px rgba(27, 75, 138, 0.4);
+    }
+
+    /* ---------- Hero Section ---------- */
+    .hero {
+      text-align: center;
+      padding: 120px 20px 80px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: #1b4b8a;
+      text-shadow: 0 0 12px rgba(27, 75, 138, 0.25);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ---------- Aura Card ---------- */
+    .aura-card {
+      max-width: 850px;
+      margin: 60px auto;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 18px;
+      box-shadow: 0 0 25px rgba(27, 75, 138, 0.15);
+      backdrop-filter: blur(10px);
+      text-align: center;
+    }
+
+    .aura-card p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+      font-size: 0.95rem;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">Mason Schubert</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Welcome to My Website</h1>
+    <p>My name is Mason Schubert. I am a senior studying marketing at Iowa State.</p>
+  </section>
