@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
-    /* ---------- Global Styles ---------- */
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
@@ -14,48 +13,7 @@
       color: #1a1a1a;
     }
 
-    /* ---------- Navigation ---------- */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 40px;
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(12px);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav .logo {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #1b4b8a;
-      letter-spacing: 1px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 28px;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      font-size: 1rem;
-      color: #333;
-      transition: 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #1b4b8a;
-      text-shadow: 0 0 8px rgba(27, 75, 138, 0.4);
-    }
-
-    /* ---------- Hero Section ---------- */
+    /* ---------- Aura Hero Section ---------- */
     .hero {
       text-align: center;
       padding: 120px 20px 80px;
@@ -87,12 +45,6 @@
       text-align: center;
     }
 
-    .aura-card p {
-      font-size: 1.15rem;
-      line-height: 1.8;
-    }
-
-    /* ---------- Footer ---------- */
     footer {
       text-align: center;
       padding: 30px;
@@ -100,24 +52,73 @@
       font-size: 0.95rem;
       color: #555;
     }
+
+    /* ---------- Top-left Navigation (JS Injected) ---------- */
+    #side-nav {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: rgba(255, 255, 255, 0.75);
+      padding: 18px 22px;
+      border-radius: 12px;
+      box-shadow: 0 0 18px rgba(27, 75, 138, 0.25);
+      backdrop-filter: blur(10px);
+      z-index: 999;
+    }
+
+    #side-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #side-nav ul li {
+      margin-bottom: 12px;
+    }
+
+    #side-nav ul li a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: #1b4b8a;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    #side-nav ul li a:hover {
+      color: #0f2c52;
+      text-shadow: 0 0 8px rgba(27, 75, 138, 0.4);
+    }
   </style>
 </head>
 
 <body>
-
-  <!-- Navigation -->
-  <nav>
-    <div class="logo">Mason Schubert</div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
 
   <!-- Hero Section -->
   <section class="hero" id="home">
     <h1>Welcome to My Website</h1>
     <p>My name is Mason Schubert. I am a senior studying marketing at Iowa State.</p>
   </section>
+
+  <!-- Aura Card Section -->
+  <section class="aura-card" id="about">
+    <p>
+      Welcome to my website! My name is Mason Schubert I am a senior studying
+      marketing at Iowa State. This space highlights my academic journey,
+      professional experiences, and personal projects as I prepare for my future
+      career in marketing.
+    </p>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> Mason Schubert — All Rights Reserved
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Load your reusable navigation -->
+  <script src="navigation.js"></script>
+
+</body>
+</html>
