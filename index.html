@@ -15,19 +15,18 @@
 
     /* ---------- Logo Header ---------- */
     header {
-      display: flex;
-      align-items: center;
       padding: 20px;
       background: #0d132b;
       border-bottom: 3px solid #e01e37;
+      text-align: center;
     }
 
     header .logo {
-      font-size: 2rem;
+      font-size: 2.4rem;
       font-weight: 700;
       color: #e01e37;
-      letter-spacing: 1px;
       text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     /* ---------- Primary Navigation ---------- */
@@ -35,17 +34,17 @@
       background: #e01e37;
       padding: 14px 20px;
       display: flex;
-      gap: 25px;
-      border-bottom: 2px solid #ffffff33;
+      justify-content: center;
+      gap: 40px;
     }
 
     nav.primary-nav a {
       color: #fff;
       text-decoration: none;
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       font-weight: 600;
-      transition: 0.3s;
       text-transform: uppercase;
+      transition: 0.3s;
     }
 
     nav.primary-nav a:hover {
@@ -57,16 +56,16 @@
       background: #162447;
       padding: 10px 20px;
       display: flex;
-      gap: 20px;
-      border-bottom: 2px solid #ffffff22;
+      justify-content: center;
+      gap: 30px;
     }
 
     nav.secondary-nav a {
       color: #cdd7f7;
       text-decoration: none;
       font-size: 0.95rem;
-      transition: 0.3s;
       text-transform: uppercase;
+      transition: 0.3s;
     }
 
     nav.secondary-nav a:hover {
@@ -78,9 +77,8 @@
       text-align: center;
       padding: 140px 20px 100px;
       background: url('sports-hero.jpg') center/cover no-repeat;
-      color: #ffffff;
-      text-shadow: 0 0 18px rgba(0,0,0,0.7);
       border-bottom: 4px solid #e01e37;
+      text-shadow: 0 0 18px rgba(0,0,0,0.7);
     }
 
     .hero h1 {
@@ -117,9 +115,19 @@
     }
 
     .main-content h2 {
-      text-transform: uppercase;
-      letter-spacing: 1px;
       color: #e01e37;
+      text-transform: uppercase;
+      margin-top: 0;
+    }
+
+    .section-header {
+      margin-top: 40px;
+      font-size: 1.8rem;
+      color: #e01e37;
+      text-transform: uppercase;
+      border-bottom: 2px solid #e01e37;
+      padding-bottom: 10px;
+      letter-spacing: 1px;
     }
 
     /* ---------- Sticky Sidebar ---------- */
@@ -135,9 +143,9 @@
     }
 
     .sidebar h3 {
-      margin-top: 0;
       color: #e01e37;
       text-transform: uppercase;
+      margin-top: 0;
     }
 
     .sidebar ul {
@@ -151,10 +159,9 @@
       text-align: center;
       padding: 30px;
       margin-top: 60px;
-      font-size: 0.95rem;
-      color: #cdd7f7;
       background: #0d132b;
       border-top: 3px solid #e01e37;
+      color: #cdd7f7;
     }
   </style>
 </head>
@@ -197,10 +204,17 @@
         This site showcases my experiences, achievements, and the competitive mindset
         I bring to every project — both academically and professionally.
       </p>
-      <p>
-        Whether it's teamwork, strategy, or performance under pressure, I bring a
-        sports‑driven mentality to everything I do.
-      </p>
+
+      <!-- SECTION HEADERS YOU WANTED -->
+      <div class="section-header">About Me</div>
+      <p>Visit the full page for more details.</p>
+
+      <div class="section-header">Skills</div>
+      <p>Visit the full page for more details.</p>
+
+      <div class="section-header">Work Experience</div>
+      <p>Visit the full page for more details.</p>
+
     </div>
 
     <aside class="sidebar">
