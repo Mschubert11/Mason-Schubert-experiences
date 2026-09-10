@@ -140,42 +140,6 @@
       font-size: 0.95rem;
       color: #555;
     }
-
-    /* ---------- Top-left Navigation (JS Injected) ---------- */
-    #side-nav {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      background: rgba(255, 255, 255, 0.75);
-      padding: 18px 22px;
-      border-radius: 12px;
-      box-shadow: 0 0 18px rgba(27, 75, 138, 0.25);
-      backdrop-filter: blur(10px);
-      z-index: 999;
-    }
-
-    #side-nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    #side-nav ul li {
-      margin-bottom: 12px;
-    }
-
-    #side-nav ul li a {
-      text-decoration: none;
-      font-size: 1rem;
-      color: #1b4b8a;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    #side-nav ul li a:hover {
-      color: #0f2c52;
-      text-shadow: 0 0 8px rgba(27, 75, 138, 0.4);
-    }
   </style>
 </head>
 
@@ -245,9 +209,6 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-
-  <!-- Load your reusable navigation -->
-  <script src="navigation.js"></script>
 
 </body>
 </html>
