@@ -9,46 +9,63 @@
 
 <body class="sports-theme">
 
-  <!-- LOGO AREA -->
+  <!-- HEADER -->
   <header class="logo-header">
-    <div class="logo-text">Mason Schubert</div>
+    <h1 class="logo-text">Mason Schubert</h1>
   </header>
 
-  <!-- PRIMARY NAVIGATION -->
+  <!-- NAVIGATION -->
   <nav class="primary-nav">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="education.html">Education</a></li>
-      <li><a href="work.html">Work Experience</a></li>
-      <li><a href="skills.html">Skills</a></li>
-    </ul>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="education.html">Education</a>
+    <a href="work.html">Work Experience</a>
+    <a href="skills.html">Skills</a>
   </nav>
 
-  <!-- SECONDARY NAVIGATION -->
-  <nav class="secondary-nav">
-    <ul>
-      <li><a href="#">Highlights</a></li>
-      <li><a href="#">Stats</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO IMAGE -->
+  <!-- HERO -->
   <section class="hero-area">
     <div class="hero-overlay">
-      <h1>Game On</h1>
-      <p>Energy. Drive. Competition. Welcome to my sports‑themed digital portfolio.</p>
+      <h2>Game On</h2>
+      <p>Welcome to my sports‑themed portfolio — built with energy, passion, and drive.</p>
     </div>
   </section>
 
-  <!-- MAIN PAGE LAYOUT -->
-  <div class="page-layout">
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <h2>My Journey</h2>
+    <p>I’m Mason Schubert, a senior studying marketing at Iowa State University.</p>
+    <p>This site showcases my experiences, achievements, and the competitive mindset I bring to every project — both academically and professionally.</p>
 
-    <!-- MAIN CONTENT -->
-    <main class="main-content">
-      <h2>My Journey</h2>
+    <h3>About Me</h3>
+    <p>Visit the full page for more details.</p>
 
-      <p>
-        I’m Mason Schubert, a senior studying marketing at Iowa State University. This website
-        showcases my academic
+    <h3>Skills</h3>
+    <p>Visit the full page for more details.</p>
+
+    <h3>Work Experience</h3>
+    <p>Visit the full page for more details.</p>
+  </main>
+
+  <!-- QUICK LINKS -->
+  <aside class="quick-links">
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="work.html">Work Experience</a></li>
+      <li><a href="education.html">Education</a></li>
+    </ul>
+  </aside>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Mason Schubert — All Rights Reserved</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
