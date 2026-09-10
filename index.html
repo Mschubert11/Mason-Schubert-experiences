@@ -13,38 +13,126 @@
       color: #1a1a1a;
     }
 
-    /* ---------- Aura Hero Section ---------- */
+    /* ---------- Logo Header ---------- */
+    header {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(27, 75, 138, 0.15);
+    }
+
+    header .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1b4b8a;
+      text-shadow: 0 0 10px rgba(27, 75, 138, 0.25);
+    }
+
+    /* ---------- Primary Navigation ---------- */
+    nav.primary-nav {
+      background: #1b4b8a;
+      padding: 14px 20px;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav.primary-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav.primary-nav a:hover {
+      opacity: 0.8;
+    }
+
+    /* ---------- Secondary Navigation ---------- */
+    nav.secondary-nav {
+      background: #274f9e;
+      padding: 10px 20px;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav.secondary-nav a {
+      color: #e8f0ff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: 0.3s;
+    }
+
+    nav.secondary-nav a:hover {
+      opacity: 0.8;
+    }
+
+    /* ---------- Hero Section ---------- */
     .hero {
       text-align: center;
       padding: 120px 20px 80px;
+      background: url('hero-image.jpg') center/cover no-repeat;
+      color: #ffffff;
+      text-shadow: 0 0 12px rgba(0,0,0,0.4);
     }
 
     .hero h1 {
-      font-size: 2.8rem;
+      font-size: 3rem;
       margin-bottom: 20px;
-      color: #1b4b8a;
-      text-shadow: 0 0 12px rgba(27, 75, 138, 0.25);
     }
 
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       max-width: 700px;
       margin: 0 auto;
       line-height: 1.7;
     }
 
-    /* ---------- Aura Card ---------- */
-    .aura-card {
-      max-width: 850px;
-      margin: 60px auto;
+    /* ---------- Main Layout ---------- */
+    .layout {
+      display: flex;
+      gap: 30px;
       padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* ---------- Main Content ---------- */
+    .main-content {
+      flex: 3;
       background: rgba(255, 255, 255, 0.85);
+      padding: 40px;
       border-radius: 18px;
       box-shadow: 0 0 25px rgba(27, 75, 138, 0.15);
       backdrop-filter: blur(10px);
-      text-align: center;
     }
 
+    /* ---------- Sticky Sidebar ---------- */
+    .sidebar {
+      flex: 1;
+      position: sticky;
+      top: 20px;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 0 25px rgba(27, 75, 138, 0.15);
+      backdrop-filter: blur(10px);
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      color: #1b4b8a;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      line-height: 1.8;
+    }
+
+    /* ---------- Footer ---------- */
     footer {
       text-align: center;
       padding: 30px;
@@ -93,21 +181,62 @@
 
 <body>
 
+  <!-- Logo -->
+  <header>
+    <div class="logo">Mason Schubert</div>
+  </header>
+
+  <!-- Primary Navigation -->
+  <nav class="primary-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="work.html">Work Experience</a>
+    <a href="skills.html">Skills</a>
+  </nav>
+
+  <!-- Secondary Navigation -->
+  <nav class="secondary-nav">
+    <a href="#">Projects</a>
+    <a href="#">Resume</a>
+    <a href="#">Contact</a>
+  </nav>
+
   <!-- Hero Section -->
-  <section class="hero" id="home">
+  <section class="hero">
     <h1>Welcome to My Website</h1>
     <p>My name is Mason Schubert. I am a senior studying marketing at Iowa State.</p>
   </section>
 
-  <!-- Aura Card Section -->
-  <section class="aura-card" id="about">
-    <p>
-      Welcome to my website! My name is Mason Schubert I am a senior studying
-      marketing at Iowa State. This space highlights my academic journey,
-      professional experiences, and personal projects as I prepare for my future
-      career in marketing.
-    </p>
-  </section>
+  <!-- Main Content + Sticky Sidebar -->
+  <div class="layout">
+
+    <div class="main-content">
+      <h2>About My Journey</h2>
+      <p>
+        Welcome to my website! My name is Mason Schubert, and I am a senior studying
+        marketing at Iowa State University. This space highlights my academic journey,
+        professional experiences, and personal projects as I prepare for my future
+        career in marketing.
+      </p>
+      <p>
+        I focus on digital marketing, brand strategy, and consumer behavior — and I’m
+        passionate about building meaningful experiences through design, communication,
+        and analytics.
+      </p>
+    </div>
+
+    <aside class="sidebar">
+      <h3>Updates & Links</h3>
+      <ul>
+        <li>Latest news</li>
+        <li>Upcoming projects</li>
+        <li>Offers & opportunities</li>
+        <li>General site info</li>
+        <li>Social icons</li>
+      </ul>
+    </aside>
+
+  </div>
 
   <footer>
     &copy; <span id="year"></span> Mason Schubert — All Rights Reserved
