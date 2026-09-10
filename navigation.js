@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   nav.innerHTML = `
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Me</a></li>
+      <li><a href="education.html">Education Me</a></li>
       <li><a href="work.html">Work Experience</a></li>
       <li><a href="skills.html">Skills</a></li>
     </ul>
