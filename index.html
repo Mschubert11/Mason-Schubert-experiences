@@ -9,8 +9,8 @@
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
-      background: radial-gradient(circle at top, #dbe7ff, #f5f5f5);
-      color: #1a1a1a;
+      background: linear-gradient(to bottom, #0a0f24, #1a1f33);
+      color: #ffffff;
     }
 
     /* ---------- Logo Header ---------- */
@@ -18,24 +18,25 @@
       display: flex;
       align-items: center;
       padding: 20px;
-      background: rgba(255, 255, 255, 0.75);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 2px 10px rgba(27, 75, 138, 0.15);
+      background: #0d132b;
+      border-bottom: 3px solid #e01e37;
     }
 
     header .logo {
       font-size: 2rem;
       font-weight: 700;
-      color: #1b4b8a;
-      text-shadow: 0 0 10px rgba(27, 75, 138, 0.25);
+      color: #e01e37;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     /* ---------- Primary Navigation ---------- */
     nav.primary-nav {
-      background: #1b4b8a;
+      background: #e01e37;
       padding: 14px 20px;
       display: flex;
       gap: 25px;
+      border-bottom: 2px solid #ffffff33;
     }
 
     nav.primary-nav a {
@@ -44,6 +45,7 @@
       font-size: 1.05rem;
       font-weight: 600;
       transition: 0.3s;
+      text-transform: uppercase;
     }
 
     nav.primary-nav a:hover {
@@ -52,17 +54,19 @@
 
     /* ---------- Secondary Navigation ---------- */
     nav.secondary-nav {
-      background: #274f9e;
+      background: #162447;
       padding: 10px 20px;
       display: flex;
       gap: 20px;
+      border-bottom: 2px solid #ffffff22;
     }
 
     nav.secondary-nav a {
-      color: #e8f0ff;
+      color: #cdd7f7;
       text-decoration: none;
       font-size: 0.95rem;
       transition: 0.3s;
+      text-transform: uppercase;
     }
 
     nav.secondary-nav a:hover {
@@ -72,19 +76,22 @@
     /* ---------- Hero Section ---------- */
     .hero {
       text-align: center;
-      padding: 120px 20px 80px;
-      background: url('hero-image.jpg') center/cover no-repeat;
+      padding: 140px 20px 100px;
+      background: url('sports-hero.jpg') center/cover no-repeat;
       color: #ffffff;
-      text-shadow: 0 0 12px rgba(0,0,0,0.4);
+      text-shadow: 0 0 18px rgba(0,0,0,0.7);
+      border-bottom: 4px solid #e01e37;
     }
 
     .hero h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
       margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     .hero p {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       max-width: 700px;
       margin: 0 auto;
       line-height: 1.7;
@@ -102,11 +109,17 @@
     /* ---------- Main Content ---------- */
     .main-content {
       flex: 3;
-      background: rgba(255, 255, 255, 0.85);
+      background: #1f2a48;
       padding: 40px;
       border-radius: 18px;
-      box-shadow: 0 0 25px rgba(27, 75, 138, 0.15);
-      backdrop-filter: blur(10px);
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
+      border-left: 5px solid #e01e37;
+    }
+
+    .main-content h2 {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #e01e37;
     }
 
     /* ---------- Sticky Sidebar ---------- */
@@ -114,16 +127,17 @@
       flex: 1;
       position: sticky;
       top: 20px;
-      background: rgba(255, 255, 255, 0.85);
+      background: #1f2a48;
       padding: 25px;
       border-radius: 18px;
-      box-shadow: 0 0 25px rgba(27, 75, 138, 0.15);
-      backdrop-filter: blur(10px);
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
+      border-right: 5px solid #e01e37;
     }
 
     .sidebar h3 {
       margin-top: 0;
-      color: #1b4b8a;
+      color: #e01e37;
+      text-transform: uppercase;
     }
 
     .sidebar ul {
@@ -138,7 +152,9 @@
       padding: 30px;
       margin-top: 60px;
       font-size: 0.95rem;
-      color: #555;
+      color: #cdd7f7;
+      background: #0d132b;
+      border-top: 3px solid #e01e37;
     }
   </style>
 </head>
@@ -160,43 +176,41 @@
 
   <!-- Secondary Navigation -->
   <nav class="secondary-nav">
-    <a href="#">Projects</a>
-    <a href="#">Resume</a>
+    <a href="#">Highlights</a>
+    <a href="#">Stats</a>
     <a href="#">Contact</a>
   </nav>
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Welcome to My Website</h1>
-    <p>My name is Mason Schubert. I am a senior studying marketing at Iowa State.</p>
+    <h1>Game On</h1>
+    <p>Welcome to my sports‑themed portfolio — built with energy, passion, and drive.</p>
   </section>
 
   <!-- Main Content + Sticky Sidebar -->
   <div class="layout">
 
     <div class="main-content">
-      <h2>About My Journey</h2>
+      <h2>My Journey</h2>
       <p>
-        Welcome to my website! My name is Mason Schubert, and I am a senior studying
-        marketing at Iowa State University. This space highlights my academic journey,
-        professional experiences, and personal projects as I prepare for my future
-        career in marketing.
+        I’m Mason Schubert, a senior studying marketing at Iowa State University.
+        This site showcases my experiences, achievements, and the competitive mindset
+        I bring to every project — both academically and professionally.
       </p>
       <p>
-        I focus on digital marketing, brand strategy, and consumer behavior — and I’m
-        passionate about building meaningful experiences through design, communication,
-        and analytics.
+        Whether it's teamwork, strategy, or performance under pressure, I bring a
+        sports‑driven mentality to everything I do.
       </p>
     </div>
 
     <aside class="sidebar">
-      <h3>Updates & Links</h3>
+      <h3>Quick Links</h3>
       <ul>
-        <li>Latest news</li>
-        <li>Upcoming projects</li>
-        <li>Offers & opportunities</li>
-        <li>General site info</li>
-        <li>Social icons</li>
+        <li>Latest Highlights</li>
+        <li>Upcoming Projects</li>
+        <li>Opportunities</li>
+        <li>Site Info</li>
+        <li>Social Media</li>
       </ul>
     </aside>
 
