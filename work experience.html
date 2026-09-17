@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta
@@ -10,113 +9,126 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>
-        Work Experience | Digital Marketing Portfolio
-    </title>
+    <meta
+        name="description"
+        content="Digital Marketing Portfolio showcasing professional work experience, responsibilities, and projects."
+    >
+
+    <title>Work Experience | Digital Marketing Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
     <div class="site-shell">
 
-
         <!-- HEADER -->
-
         <header class="site-header">
 
             <div class="logo-area">
-
                 <div
                     class="digital-marketing-graphic"
                     aria-label="Digital marketing graphic"
+                    role="img"
                 ></div>
-
             </div>
-
 
             <div class="header-main">
 
                 <div class="site-intro">
-
-                    <h1>
-                        Digital Marketing Portfolio
-                    </h1>
+                    <h1>Digital Marketing Portfolio</h1>
 
                     <p>
                         My professional work experience
                     </p>
-
                 </div>
-
 
                 <nav
                     class="primary-navigation"
                     data-site-nav
                     aria-label="Main navigation"
-                ></nav>
+                >
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+
+                        <li>
+                            <a href="experience.html" aria-current="page">
+                                Experience
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="projects.html">Projects</a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
 
             </div>
 
         </header>
 
 
-
-        <!-- MAIN -->
-
+        <!-- MAIN PAGE GRID -->
         <div class="page-grid">
 
-
-            <!-- LEFT -->
-
+            <!-- LEFT SIDEBAR -->
             <aside class="side-navigation">
 
                 <h2>Experience</h2>
 
-                <ul>
+                <nav aria-label="Experience sections">
 
-                    <li>
-                        <a href="#experience">
-                            Experience
-                        </a>
-                    </li>
+                    <ul>
+                        <li>
+                            <a href="#experience">
+                                Experience
+                            </a>
+                        </li>
 
-                    <li>
-                        <a href="#responsibilities">
-                            Responsibilities
-                        </a>
-                    </li>
+                        <li>
+                            <a href="#responsibilities">
+                                Responsibilities
+                            </a>
+                        </li>
 
-                    <li>
-                        <a href="#projects">
-                            Projects
-                        </a>
-                    </li>
+                        <li>
+                            <a href="#projects">
+                                Projects
+                            </a>
+                        </li>
+                    </ul>
 
-                </ul>
+                </nav>
 
             </aside>
 
 
-
-            <!-- CENTER -->
-
+            <!-- MAIN CONTENT -->
             <main class="main-content">
 
-
-                <section class="hero-image">
-
-                    <span>
+                <!-- HERO -->
+                <section
+                    class="hero-image"
+                    aria-labelledby="experience-title"
+                >
+                    <h2 id="experience-title">
                         Work Experience
-                    </span>
-
+                    </h2>
                 </section>
 
 
-
+                <!-- PROFESSIONAL EXPERIENCE -->
                 <section
                     class="content-section"
                     id="experience"
@@ -141,7 +153,7 @@
                 </section>
 
 
-
+                <!-- RESPONSIBILITIES -->
                 <section
                     class="content-section"
                     id="responsibilities"
@@ -160,7 +172,7 @@
                 </section>
 
 
-
+                <!-- PROJECTS -->
                 <section
                     class="content-section"
                     id="projects"
@@ -182,9 +194,7 @@
             </main>
 
 
-
-            <!-- RIGHT -->
-
+            <!-- RIGHT SIDEBAR -->
             <aside class="sticky-content">
 
                 <div class="sticky-card">
@@ -193,15 +203,25 @@
 
                     <ul>
 
-                        <li>Marketing Projects</li>
+                        <li>
+                            Marketing Projects
+                        </li>
 
-                        <li>Digital Content</li>
+                        <li>
+                            Digital Content
+                        </li>
 
-                        <li>Teamwork</li>
+                        <li>
+                            Teamwork
+                        </li>
 
-                        <li>Communication</li>
+                        <li>
+                            Communication
+                        </li>
 
-                        <li>Project Management</li>
+                        <li>
+                            Project Management
+                        </li>
 
                     </ul>
 
@@ -212,9 +232,7 @@
         </div>
 
 
-
         <!-- FOOTER -->
-
         <footer class="site-footer">
 
             <p>
@@ -229,11 +247,12 @@
 
         </footer>
 
-
     </div>
 
 
+    <!-- JAVASCRIPT -->
     <script src="navigation.js"></script>
 
 </body>
+
 </html>
