@@ -32,7 +32,7 @@ const navigationItems = [
     },
     {
         name: "Work Experience",
-        url: "work-experience.html"
+        url: "work experience.html"
     },
     {
         name: "Education",
