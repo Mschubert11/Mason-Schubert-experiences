@@ -1,120 +1,494 @@
-/* GLOBAL SPORTS THEME */
-body.sports-theme {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  color: #111;
+/* =========================================================
+   style.css
+   Digital Marketing Portfolio
+   ========================================================= */
+
+:root {
+    --light-red: #f8d6d6;
+    --black: #000000;
+    --white: #ffffff;
+    --border: #222222;
+    --light-grey: #f5f5f5;
 }
 
-/* LOGO */
-.logo-header {
-  background: linear-gradient(90deg, #d00000, #0033cc);
-  padding: 20px;
-  text-align: center;
+/* ---------- Basic reset ---------- */
+
+* {
+    box-sizing: border-box;
 }
 
-.logo-text {
-  font-size: 2rem;
-  font-weight: bold;
-  color: white;
-  letter-spacing: 2px;
+html {
+    scroll-behavior: smooth;
 }
 
-/* PRIMARY NAV */
-.primary-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 10px;
-  background: #0033cc;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background-color: var(--light-red);
+    color: var(--black);
+
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.primary-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px 12px;
+/* =========================================================
+   MAIN WEBSITE AREA
+
+   10% is left empty on both sides.
+   Therefore the website itself is 80% wide.
+   ========================================================= */
+
+.site-shell {
+    width: 80%;
+    margin: 0 auto;
+
+    min-height: 100vh;
+
+    background-color: var(--white);
+
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
 }
 
-.primary-nav a:hover {
-  background: #d00000;
-  border-radius: 4px;
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+    display: grid;
+    grid-template-columns: 20% 80%;
+
+    border-bottom: 1px solid var(--border);
 }
 
-/* SECONDARY NAV */
-.secondary-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 8px;
-  background: #d00000;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+
+/* ---------- Logo ---------- */
+
+.logo-area {
+    min-height: 145px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    border-right: 1px solid var(--border);
 }
 
-.secondary-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+
+/*
+   CSS digital-marketing graphic.
+
+   It represents:
+   - computer/screen
+   - analytics bars
+   - growth arrow
+*/
+
+.digital-marketing-graphic {
+    position: relative;
+
+    width: 110px;
+    height: 82px;
+
+    border: 4px solid var(--black);
+    border-radius: 8px;
+
+    background: var(--white);
+
+    box-shadow: 8px 8px 0 var(--black);
 }
 
-/* HERO AREA */
-.hero-area {
-  background: url('https://images.unsplash.com/photo-1521412644187-c49fa049e84d') center/cover no-repeat;
-  height: 300px;
-  position: relative;
+
+/* Analytics bars */
+
+.digital-marketing-graphic::before {
+    content: "";
+
+    position: absolute;
+
+    left: 13px;
+    bottom: 13px;
+
+    width: 13px;
+    height: 22px;
+
+    background: var(--black);
+
+    box-shadow:
+        21px -11px 0 var(--black),
+        42px -28px 0 var(--black);
 }
 
-.hero-overlay {
-  background: rgba(0, 0, 0, 0.55);
-  height: 100%;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+
+/* Growth arrow */
+
+.digital-marketing-graphic::after {
+    content: "↗";
+
+    position: absolute;
+
+    right: 5px;
+    top: -22px;
+
+    font-size: 54px;
+    line-height: 1;
+
+    font-weight: 900;
 }
 
-.hero-overlay h1 {
-  font-size: 3rem;
-  margin: 0;
+
+/* =========================================================
+   HEADER INFORMATION
+   ========================================================= */
+
+.header-main {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
 }
 
-.hero-overlay p {
-  font-size: 1.2rem;
+.site-intro {
+    min-height: 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 18px 28px;
+
+    text-align: center;
+
+    border-bottom: 1px solid var(--border);
 }
 
-/* PAGE LAYOUT */
-.page-layout {
-  display: flex;
-  padding: 20px;
-  gap: 20px;
+.site-intro h1 {
+    margin: 0;
+
+    font-size: clamp(1.3rem, 2.2vw, 2rem);
 }
 
-/* MAIN CONTENT */
+.site-intro p {
+    margin: 7px 0 0;
+
+    font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   COMBINED PRIMARY + SECONDARY NAVIGATION
+
+   There are NO lines separating the navigation sections.
+   Everything is one continuous black navigation bar.
+   ========================================================= */
+
+.primary-navigation {
+    background-color: var(--black);
+}
+
+.primary-navigation ul {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.primary-navigation li {
+    margin: 0;
+    padding: 0;
+}
+
+.primary-navigation a {
+    display: block;
+
+    padding: 14px 17px;
+
+    color: var(--white);
+    background-color: var(--black);
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.primary-navigation a:hover,
+.primary-navigation a:focus-visible,
+.primary-navigation a[aria-current="page"] {
+    background-color: #333333;
+    color: var(--white);
+
+    outline: none;
+}
+
+
+/* =========================================================
+   MAIN WIREFRAME
+
+   LEFT       | CENTER             | RIGHT
+   20%        | 60%                | 20%
+   ========================================================= */
+
+.page-grid {
+    display: grid;
+
+    grid-template-columns: 20% 60% 20%;
+
+    min-height: 600px;
+}
+
+
+/* =========================================================
+   LEFT COLUMN
+   ========================================================= */
+
+.side-navigation {
+    padding: 25px 20px;
+
+    border-right: 1px solid var(--border);
+
+    background-color: var(--white);
+}
+
+.side-navigation h2,
+.sticky-content h2 {
+    margin: 0 0 15px;
+
+    font-size: 1rem;
+}
+
+.side-navigation ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.side-navigation li + li {
+    margin-top: 9px;
+}
+
+.side-navigation a {
+    color: var(--black);
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.side-navigation a:hover,
+.side-navigation a:focus-visible {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
 .main-content {
-  flex: 3;
-  background: white;
-  padding: 20px;
-  border-left: 5px solid #0033cc;
-  border-right: 5px solid #d00000;
+    min-width: 0;
+
+    padding: 22px 25px 35px;
 }
 
-/* SECTION CARDS */
-.section-card {
-  background: #f8f8f8;
-  padding: 15px;
-  border-left: 5px solid #0033cc;
-  margin-bottom: 20px;
+
+/* ---------- Hero image ---------- */
+
+.hero-image {
+    min-height: 145px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 24px;
+
+    border: 1px solid var(--border);
+
+    background:
+        linear-gradient(
+            135deg,
+            #111111 0%,
+            #333333 55%,
+            #666666 100%
+        );
+
+    color: var(--white);
+
+    text-align: center;
+
+    overflow: hidden;
 }
 
-.section-btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 12px;
-  background: #0033cc;
-  color: white;
-  text-decoration: none;
-  border
+.hero-image span {
+    padding: 20px;
+
+    font-size: clamp(1.2rem, 3vw, 2rem);
+
+    font-weight: 800;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* ---------- Content ---------- */
+
+.main-content h2 {
+    margin: 0 0 12px;
+
+    font-size: 1.55rem;
+}
+
+.main-content p {
+    max-width: 70ch;
+
+    line-height: 1.65;
+}
+
+.content-section {
+    margin-bottom: 35px;
+
+    scroll-margin-top: 20px;
+}
+
+
+/* =========================================================
+   RIGHT STICKY CONTENT
+   ========================================================= */
+
+.sticky-content {
+    padding: 25px 18px;
+
+    border-left: 1px solid var(--border);
+
+    background-color: var(--light-grey);
+}
+
+.sticky-content ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.sticky-content li {
+    margin-bottom: 13px;
+
+    line-height: 1.35;
+}
+
+.sticky-card {
+    position: sticky;
+    top: 18px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+    padding: 16px 22px;
+
+    border-top: 1px solid var(--border);
+
+    background-color: var(--white);
+
+    font-size: 0.9rem;
+
+    text-align: center;
+}
+
+.site-footer a {
+    color: var(--black);
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    /*
+       Reduce the outside margin slightly on smaller screens
+       so there is more usable space.
+    */
+
+    .site-shell {
+        width: 90%;
+    }
+
+    .site-header {
+        grid-template-columns: 1fr;
+    }
+
+    .logo-area {
+        min-height: 125px;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+
+    /* Navigation */
+
+    .primary-navigation ul {
+        justify-content: stretch;
+    }
+
+    .primary-navigation li {
+        flex: 1 1 33.333%;
+    }
+
+    .primary-navigation a {
+        padding: 12px 8px;
+
+        text-align: center;
+
+        font-size: 0.9rem;
+    }
+
+
+    /* Stack the three-column layout */
+
+    .page-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .side-navigation,
+    .sticky-content {
+        border: 0;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+
+    /* Left navigation becomes horizontal */
+
+    .side-navigation ul {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 8px 18px;
+    }
+
+
+    /* Disable sticky behavior on mobile */
+
+    .sticky-card {
+        position: static;
+    }
+}
